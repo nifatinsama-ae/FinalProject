@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="tin2">
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ผลการเรียน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let sb of subjects">
+    <ion-card-header>
+      {{ sb.idstd }}
+    </ion-card-header>
+    <ion-card-content>
+      <h2>{{ sb.idsub }}</h2>  
+      <h3>{{ sb.namesub }}</h3>
+      <ion-badge item-end color="tin2">{{ sb.grade }}</ion-badge>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

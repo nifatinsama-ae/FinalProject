@@ -4,7 +4,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { AboutPage } from '../pages/about/about';
+import { YoutubePage } from '../pages/youtube/youtube';
+import { NewsPage } from '../pages/news/news';
+import { GradePage } from '../pages/grade/grade';
+//import { LoginPage } from '../pages/login/login';
+//import { AboutPage } from '../pages/about/about';
+//import { RegisterPage } from '../pages/register/register';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,6 +19,9 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
+  //rootPage: any = LoginPage;
+  //rootPage: any = RegisterPage;
+
 
   pages: Array<{title: string, component: any}>;
 
@@ -21,8 +30,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'หน้าแรก', component: HomePage },
+      { title: 'ผลการเรียน', component: GradePage },
+      { title: 'ช่องรายการยูทูบ', component: YoutubePage },
+      { title: 'ข่าวสารปัจจุบัน', component: NewsPage },
+      { title: 'ผู้จัดทำ', component: AboutPage }
+    
     ];
 
   }

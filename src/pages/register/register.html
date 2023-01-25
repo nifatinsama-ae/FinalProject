@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar color="tin5">
+    <ion-title>ลงทะเบียนใช้งาน</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked >ID Student</ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+<ion-item>
+  <ion-label stacked >First Name</ion-label>
+  <ion-input type="text" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked >Last Name</ion-label>
+  <ion-input type="text" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked >Email</ion-label>
+  <ion-input type="text" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label stacked >Password</ion-label>
+  <ion-input type="Password" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Department</ion-label>
+  <ion-select [(ngModel)]="dep" interface="popover">
+    <ion-option value="Information Technology">Information Technology</ion-option>
+    <ion-option value="Digital Business Technology">Digital Business Technology</ion-option>
+    <ion-option value="Food Technology">Food Technology</ion-option>
+    <ion-option value="Textile Technology">Textile Technology</ion-option>
+    <ion-option value="Electrical Technology">Electrical Technology</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+<button ion-button block round color="tin3">Register</button>
+
+</ion-content>

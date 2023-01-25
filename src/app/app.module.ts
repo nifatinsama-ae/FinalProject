@@ -4,18 +4,32 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+import { AboutPage } from '../pages/about/about';
+import { YoutubePage } from '../pages/youtube/youtube';
+import { NewsPage } from '../pages/news/news';
+import { NewsServiceProvider } from '../providers/news-service/news-service';
+import { HttpClientModule } from '@angular/common/http';
+import { SubjectServiceProvider } from '../providers/subject-service/subject-service';
+import { GradePage } from '../pages/grade/grade';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    LoginPage,
+    RegisterPage,
+    AboutPage,
+    YoutubePage,
+    NewsPage,
+    GradePage
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -23,12 +37,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    LoginPage,
+    RegisterPage,
+    AboutPage,
+    YoutubePage,
+    NewsPage,
+    GradePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NewsServiceProvider,
+    SubjectServiceProvider
   ]
 })
 export class AppModule {}
